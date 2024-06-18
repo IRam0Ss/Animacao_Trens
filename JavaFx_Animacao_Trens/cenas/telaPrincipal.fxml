@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="563" maxWidth="999" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.ControleAnimacao">
+   <children>
+      <ImageView fitHeight="563.0" fitWidth="999.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/PlanoDeFundo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="563.0" prefWidth="999.0">
+         <children>
+            <ImageView fx:id="trem01" fitHeight="43.0" fitWidth="110.0" layoutX="19.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/trens.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="trem02" fitHeight="43.0" fitWidth="110.0" layoutX="19.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/trens.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botaoTelaInicial" layoutX="34.0" layoutY="32.0" mnemonicParsing="false" onAction="#mudePraTelaInicial" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #D00000; -fx-border-color: #000000; -fx-background-radius: 20; -fx-border-radius: 20; -fx-font-style: Italic;" text="TelaInicial" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Bernard MT Condensed" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="40.0" surfaceScale="2.88">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button fx:id="botaoReset" layoutX="874.0" layoutY="32.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" style="-fx-background-color: #D00000; -fx-border-color: #000000; -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-style: Italic;" text="Reset" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Bernard MT Condensed" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="40.0" surfaceScale="2.05">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Slider fx:id="sliderVelocidadeTrem01" blockIncrement="1.0" layoutX="53.0" layoutY="498.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="38.0" prefWidth="159.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #000000;" value="5.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Slider>
+            <Label fx:id="indicadorVelocidadeTrem01" layoutX="107.0" layoutY="434.0" style="-fx-font-style: italic;" text="Label" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="461.0" text="Trem 01" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="Bernard MT Condensed" size="19.0" />
+               </font>
+            </Label>
+            <Slider fx:id="sliderVelocidadeTrem02" blockIncrement="1.0" layoutX="794.0" layoutY="489.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="38.0" prefWidth="159.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #000000;" value="5.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Slider>
+            <Label layoutX="845.0" layoutY="447.0" text="Trem 02" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="Bernard MT Condensed" size="19.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="caixaOpcoes" layoutX="374.0" layoutY="61.0" prefHeight="28.0" prefWidth="251.0" style="-fx-background-color: #FFFFFF;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ChoiceBox>
+            <Label layoutX="353.0" layoutY="32.0" text="Escolha as direções dos trens" textFill="#d00000">
+               <font>
+                  <Font name="Bell MT Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="indicadorVelocidadeTrem02" layoutX="857.0" layoutY="422.0" style="-fx-font-style: italic;" text="Label" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
